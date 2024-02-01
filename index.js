@@ -1,5 +1,5 @@
 import express from 'express'
-import {engine ,create} from 'express-handlebars'
+import {create} from 'express-handlebars'
 
 const app = express()
 
