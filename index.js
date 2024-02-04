@@ -2,6 +2,7 @@ import express from 'express'
 import { create } from 'express-handlebars'
 import mongoose from 'mongoose'
 import * as dotenv from 'dotenv'
+import flash from "connect-flash"
 
 // routes
 import authRoutes from './routes/auth.js'
@@ -25,6 +26,7 @@ app.set('views', './views');
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
 app.use(express.json())
+app.use(flash())
 
 app.use(authRoutes)
 app.use(productsRoutes)
